@@ -333,6 +333,7 @@
     .pair .quote-box.modern { background: var(--white); border: 1px solid #D5DDE8; }
     .pair .quote-box.modern .quote-text { font-style: normal; }
     .seq-main .timeline { width: 100%; height: auto; margin: 0.2em 0 0.9em; }
+    .seq-main .arch { width: 100%; height: auto; margin: 0.1em 0 0.8em; }
     .takeaways p {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 700;
@@ -368,9 +369,9 @@
         <li>behind the scenes: security for long-lived project code <span class="m">· starting now</span></li>
       </ul>
       <aside class="notes">
-        <p>[0:30–1:10]</p>
-        <p>One sentence on each project, plus the behind-the-scenes work on security. Then the statuses, plainly: Webster's is funded. PRINT's AI work is still at the pilot stage. The transcription system is in planning.</p>
-        <p>For each project I'll ask the same question: what does the machine do, and what do people still do?</p>
+        <p>[0:30–1:05]</p>
+        <p>I'll take you through three projects. PRINT is a portal for early modern religious-minority correspondence networks. It's live, and we're piloting AI on its data. Our handwriting transcription system is still in the planning stage. Webster's Dictionary Online is funded and in development. And behind all of these, we're starting to use AI to keep our older project sites secure.</p>
+        <p>For each one I'll ask the same two questions: what does the machine do, and what do people still do?</p>
       </aside>
     </section>
 
@@ -382,6 +383,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <p class="question">about 3,000 letters, three languages, five archives</p>
@@ -392,7 +394,7 @@
         <p class="fig-cap" style="text-align:left">printmigrationnetwork.org</p>
       </div>
       <aside class="notes">
-        <p>[1:10–2:15]</p>
+        <p>[1:05–2:00]</p>
         <p>PRINT, People, Religion, Information Networks and Travel, gathers Quaker, Anabaptist and Pietist correspondence from five repositories in the US, England, Germany and the Netherlands, in English, Dutch and German. It is funded by the NHPRC through 2026, and volunteers on Zooniverse help transcribe the letters.</p>
         <p>Rosalind Beiler's thesis: these minority religious networks carried far more than migration. They carried business, family news and politics.</p>
         <p>Researchers built the structure: names and places standardized as linked open data, with variant spellings kept; 169 nested keywords, plus modern "altkeywords" such as money for specie; and twelve kinds of mention, including trip, encounter, birth and marriage.</p>
@@ -409,6 +411,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <p class="question">the network as context, not conclusion</p>
@@ -416,7 +419,7 @@
         <p class="fig-cap">PRINT portal, network view · 365 nodes, 517 edges · July 2025 build</p>
       </div>
       <aside class="notes">
-        <p>[2:15–3:30]</p>
+        <p>[2:00–3:10]</p>
         <p>You choose what counts as a connection. Nodes can be people, organizations, religions or documents. Ties can be sender, receiver, author, waypoint, or mentioned. Writing to someone and being mentioned by someone are different ties, and the portal keeps them apart. A time slider shows ties forming and fading across the century.</p>
         <p>The familiar objection: network graphs look like an objective, top-down truth about a community, and they say little about the ideas that drive communication. PRINT turns this around. The network is the context you read a letter, or a bundle of letters, against.</p>
         <p>Example: an account of slavery in the colonies may seem forceful because it occurs repeatedly. If the letters carrying it cluster in an isolated community, cut off from most of the network, its influence looks different.</p>
@@ -432,6 +435,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <p class="question">ai proposes, researchers decide</p>
@@ -455,7 +459,7 @@
         </div>
       </div>
       <aside class="notes">
-        <p>[3:30–4:20]</p>
+        <p>[3:10–3:55]</p>
         <p>Dr. Beiler's Wistar story: in 1736 Caspar Wistar, a Philadelphia Quaker merchant, orders custom rifles from Georg Friedrich Hölzer in the Neckar Valley, to be sent with migrants. He tells Hölzer to check with Jacob Schnäbeli, an Anabaptist elder in Mannheim, who will know who is migrating.</p>
         <p>Named-entity recognition proposes the names and places. A researcher accepts, merges or rejects each one, assigns a mention type, and flags anything uncertain. PRINT's mention records have uncertainty fields for person, place, date and keyword.</p>
         <p>Schnäbeli never writes a letter in this exchange, yet he is a hub of migration knowledge. Mentions put people like him into the network, people the sender and receiver metadata alone would miss.</p>
@@ -471,6 +475,7 @@
         <span class="seq-item active">transcription</span>
         <span class="seq-item">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <div class="split">
@@ -490,7 +495,7 @@
         </div>
       </div>
       <aside class="notes">
-        <p>[4:20–5:30]</p>
+        <p>[3:55–4:50]</p>
         <p>This is a proposed test system, not a production tool. This page switches from Latin to English mid-page, is written in secretary hand, and abbreviates words like p-bar-dict. No single model handles all of that best.</p>
         <p>Frontier vision models now lead on English. Fine-tuned specialist models still win on many non-English collections. Some models quietly modernize spelling, which historians can't accept. So the system sends each collection to the cheapest model that meets the quality bar: a fine-tuned open model, a frontier vision model, or a layout-aware OCR engine.</p>
         <p>A second model then re-reads the image together with the draft and marks [?] or [illegible]. In one study, an LLM correcting conventional HTR output cut the character error rate from 5.7% to 1.8% (Humphries et al., 2025). People correct only the flagged spans, and each verified correction becomes training and test data.</p>
@@ -506,6 +511,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item active">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <p class="question">one word, three dictionaries</p>
@@ -516,7 +522,7 @@
         <figure class="facs-1806"><img class="strip" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAA1Aq4DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD1FInSVHhicKw6Cln4YFM4Yc0+3LZEgL5XgADPFPnwPnJ3A1456TK8mXUbecdaYrGMo29U3dGY1NlfKMsR8pR94n071438S/FEd5qS2dpcSNaI3WM8P9CKdiGelahe6HZXYibULRJsj5sHv26VZjezv5N9tJFIE4Lp3NeZ+Gde07WYv+Ef1KxDW8YylwCS69+a6rwLa6bZ6fqEdpcOyW87szH+7njvT5QOwW5jLpAVDOR8orP1fWNI0ueKG8ukglmO1EOck1Rn8Sw6dNpzi0kltr9xElyVOEYnA/lWd8Trhf7FSdrLzrpJ08oKCSQGFKwHVFTGAr4zj86miwpUMcZ6Vz134xg0tdJk1iwls7O9jUPcbSfKc5+U54AxUXjvW7zTdNtdN0tfOvr11eGROSqZ5/QigDpXe0hkSGW4SK6diY0J5NTPbzrF5hlwuM5rj7yw0GHxBo15ql9dpq8cKKY1TKs+0571P4p8faV4WuFhvIrqXzCMqIzgfrQI6VLd2Il3b2XkVLNcDarucbu9czF4206G9tLe7trmz+2rm3YocOCM9/qK3NSu7HRIIm1CbaHOxF/iZvQCk0WiYuez4qWSMSRAHfkj161lRa7p51UaZMs9vcMu5POTaHGM/Ke9cp4m8dnTvFdhatFdCztJCZo0jyzcEdPTNJJlHcqrkfIpLKMAe1SHdKYiThvTv+NVdH1i18QWkWqWayorDBSRdpHPpVp2Cyq4+6fu/WmQLc6elySlxapJGWyUcZB96ghsIkUixhjgi3DIiGCanmuXSNw7qrdNxPyr9T2rIXxjoK3v9ntdNHIqli5ACH8c0AajRyJIdxzz19qct275jwdq8Vmad4o03VdTk020eWSeNQ5yvGD0Oa1rhREqSD7/AN3A70AQ43Mdny460PGsh8xvmHf2qWTMargf/XqC8u7exheeeVYYE++znGBQihwd4W2BfMB6Y7Cng7AZFOM8GP0rKttf0S5vVsre+DTSDcMkYrWkUphSV9OtD0Fchhg33JZHCuR09R61YsvOniZHIIViNxPTmue8V6+PD+h3F9HNElyqERxu2C3uK5/QvDF34i0Gxv5dXuor6WZpXIA2suQdv4CkB3skWJSijoaQF2LREZ45zVSTWtMt3+zz30SPD8ocsMf8CPaqvivX7fw5o8l5PKJJ5V/cBeSx7Ee3SiwF+3ItHeCT5Q4496I08mX95wxGceorF8OeLtL1mzskubuRNUmUKYmUdcZ4rdLvGuwyK4z95uPwqWAyH94SynhiQD9Oook3rmWMrtHDIRyBSJFa29tLNcTLEiHO9jhVyfWqVh4i0W8u5ba2vfMnThkbAyfb1oSGiSfS9NnPnTWEfmNx5iqMnNTWOm6fpkcgtbdIZHOGJIyR61meK9cm0bQp3E8cErOqKSRlQeNwz6VmaP4GSbU7DWjrkl9+6WWQ7hh2IOQQKBnW3ShzsH3x1ZOAaLcFkKgcim8GY9fTiszxJJKdMuY7TUIrW6SPcrKwJHHoaYGrIrqASpw1Y2r+EdL1m4gvrm1lS4t87JIiAxz7/hUPgW+utQ8GWkt1fNPcqQJDIAMcV0rXdskBla8tfLTAZxINoP1pAYn/AAj2nRy29y/2maaNtyJKwO0461q43scNuPqelTxCG5h87zEMbcbweMeoqOSJZ13W0sUqr1EbZI+tCuIrwSNl2K7dvBIqQI0IEhG8uMqtPjt5LKPKlJY3PzAH5h+FWFQpOilkZSvAz39TTaYNlSHyZiS0WGqzPZpLaS25ysdwuxvQiiJnQMxEOCePm6/Sn3E9tFah7m4S3DHGZW2j8KaVhXMrRPDel+GrQwaZbLDGxyzKMMx9zWmjBoyOhHcUWzx3q5ikjcN3VsiomuLW3z5t3BGinDFnAAphcFX55A5yF7+tR/I3Hl9e9LczwpbiY3MCwtyJS42t9DUhTZbrMrpIhxhkOaLBciEcsb8N5qFQNvpTrjEbr86EEc4HSnSL5cO8sFVvvZPNET7lChd28Ej1NITGLtVlwm5ex7VLPIjYKjBQZ/GoUM8hRCgUgn5T1p84kTaYwrKfv89Komw0ENMqg5YqTimvEiECQ7WPakg8y4kbzkMbIRt96tXQkRAAqLKfujPJoGVkgkjdVjQlX5JFDypEmJOoY5FUfEk+tQaNNLp7LFND87Pn+EdaqeENV1LxL4VinvjG9w88iBgeMKadwNoMjfdTFKcxjzcbscbfXNPMLwqHYAqBzjt9aWJBL8wlK+gx37UAVZvnIVCC+dzKf4almYSLGiZX+FmPpTjmS6aF5YfMC8jd835U1IZIECbnOATwM4pASDEYAHO3v/erOl0yxXVxq/2X7Rd7MKWwfL57elaIxu253nAJx2pzCPYexoAijuBL87xFD71Mx4VTwJOjelc34z1+68PaUlxZwLLc3EqQRhzhVLHbnP45rmYJvH9l410i11aTz7OR8uV5jI2njIFMD0SWMSnbGcvHwH9aYkvmDaAYpVPLHo1SxQurtsBYg8qOv/6qjvUyjsUfEY3HaMmiwFuJ8KMkE9yKhvG3Dim2UsU1tHIkiMXGQgOWP4VMLZ5gcY45IJ5pARQuEhJPAFJKoZDuXinwgGRI8BhnkGi5lbeY5o8rIPkbsKAI4YxGpYNlP5U4sGRnXlcYzSQRPBFloyQD/DyDU02zyGCI6EnLbhjFSBGWDARyHCEZJ96esEbLkHrUJhlyC6nZ6jpU2xgmNpX/AHuKaC4u8L8jMHUfdbsDTJfNKHbNGfYA5oAcwFhGx2HnintOI4hJKi7SOMdaY7leKKa2YmOXOBn6mrMVwtwXWRdkq/eBrmvEPim60S5sdPtoUk1K9kAiMx2ooPv9aqeG7/xlJ4onstes1lsViZhNHyMleACAO9ArnZoq5AG/JGQAaYSGUldx+Yfe5FRBJY4IZFaT5TghVzgVy9lr2r2/xDl0K5lLWM8DywpgZUDHX8TSGddFdNdFlHO3jnpRKjPDJtVGwOQBUMbRxFkiyCDg8U2S5McqIMgscOfUUAch8VhIPBsTxkp5V3AzgfxDeK6608q/02wnhlHz26sVTgCub+JrY8NiGFZJImuod5VckfOK6/SIrSKxtUjUr+5U5PH4UCK0E4V/Lib3LVI2Y5xEwLk9gOgqtH+5w6fIW4yO9XY7qaYqrkwheA/qKVy2VpE2tLE4wjoygfUV4Xc+FrifUNWtY5Y0u7dy8EJH3h04r3e8R4cxn96zHcCeuK5zX/A1vq95BqdrPJZago4mix831zVJkNHjMHjjUNNsHsFsbUsMqZFgG8n616B8P/7Sn8FXk4a3V5i+1PKwxPB5Peqtp8MJbiafGp7SXy755b1HSu907SY7PRhY26GMIuHx3yMZq7hY8iu9WVvDunvNqsjXMFwrPZLuATBPOeldZ8QdftdQ8PaDqOnXYKCZEc7TyQVDD8Oauv8ADbR59P8Asu+SOWNsmdQN8nfmqXi/wcieBo9P02FybOUuCRyS7DJrNsdjf+Id1peo+FJ4mmWSKcExEjcAf6U7w/Y/aILDX7+QSTpA0KIi42joDj8KxPCXgJ00WCLVtVnuLSbEj2hIKg+nSu8NvHAsa2kYHkphVHQj0p3FY5bx3Mtjr/hiXyI5ftEpUSEDI+TPNUvGE9tdeMdLtrh7aby2AaExcls9zU3iHwjqPivUop01T7K1sQ8MLnGxu/b0qt4h+Huuar4l/tm2uLbKsHJJPLADr+VAWJviMhjuNCa+EckcdxiIRDaVyRgfhxSeNNKm1rx7aW15dCC3iIZCTgZyeadr3g3XvEmo21ze3lvbxWYQxhGOCwAz19xVzxt4Lu/E1vZ6lbXKR6pDEFJY4V/eqQ7DtT8JWmqapZ6jqGqOZLRlEASQg5BGAfrgVV1BppfidZh4YHjdBuDxj5jg1naB4Q12C9W8167+RWG2HPDsOhH0re8TeFdR1nULfUNP1L7NdRHDHONox24oYI6EpbGItGqW6Qfe2EKv5CpWhMsEMsbLJHnIZW4rnbzR44fD95GZ5JXeImQv/wAtGxWF8OdSne6uLc3Li3VQohB+WI9Mj61AHY60LW+0+5ivS8cE4KzmM7Sg9QRXJ6RpNlqF/q+sz2q/YLCNRAGx+8IX/EV1Gu6beX2k3dhbOkc8qEK7Hr9apXGgvP4L/syG7ZbjG7f/AA7l7H8aAMT4Z6st7/aN69iLe7kkYIABkR5+Xp2ruLW7tJ7iS1F5HLOp3lBxtArnPAukP4e0tpr2VZL+clCex9AKyPCfhvXLbxlearqdj9ntlDBeD+8BxQB308isQB2OM1z/AIw0nTdW0We21i8e2tgxZnRipYY6cVu7yzsIyQvXB7Vy3xL0i41rw5GbG386SL5tnfp2prcbOAm0yz03WdN1bTpJptPkmSNXbKkEMAOte0yKJm3qMgHPB715frHhTxff+GrPzpVZgVC2yZ/d89en4133h60n0/SLS0u2ae4jUGRpOo4omSkY/wARtOt5PC1zLdRI7wDMcnHHBNVdF8Qzr8LzqUMYjeBWjA29O24U74hm/vLEaTY6a9zBOhMjgZx2xVfwSL640u58MaxaCNRF/o+Qc9OB/KiKKSK/hjR7y58FQTSC2vY9QgHmStGC6sfrz2q/46s418GBbgLI0BRY5h/CO4rnNITxX4YkmsbawvJGi+SKMr+7Hv611V54ZvNT8ES6PNd+dfcz8nqeW2/0q2gsWPCMOkS6PYX1lBby3MEYzIQCytjBz3raLRGXe6ld3XJ4z9K81+F3hfWdJ1WSe5/0WDbskjbI3sOoFenMwkjO5E3BuAe9ZS0YWOK+Imoj7dpmkyybUllDFF+UMOCM1H8RdLSLTLnUdNjt7e9tHLgwFVIYDvjrU3j/AMMy+KLIXFnA0mqW7Dygo5wD/gK4K38N+Ir3UZIbmO8ZZhsmkkHyj/69OI0dx41mmfwZBqNxbo9xL5QcMAy46HAro/DUFvBoNk1rG8aywq7Anpkdq5fxpY+INStLXR9FtnNraxjzJyPvHANdZ4XTUx4dtI9UtVhnjHlDbnDqBwTmpe4yLxPqbaLod3fIMvGp2+xxWLpFtaw+GI9RuEkvHulkleQtwDjOOa1fF2nS65oV3YRDZvU5J69O1ef2+peMNI0X+wYtJluLEgqhZTk+ppoDtPh7dJqnhpd1r5VvdttwpGRkevauO8M+ErXxLqupaT9qv49Pt5CzKbgkluSOa3vhgdT0a2NnfaXKkL/v4lkXAA6YqDwLqN1H401TfpEtpbXOeUX5VIB9fWnYDqL7SV0qXS4f7SWHRbRQJVZsySYGPr6dqxvBN1G3i3XbrTppm09m2rG5Iwdo5APSqXiI3H/Ce2zPpDajAkabY5ASoPPIx3p1rNfRfEy7T7O1tHcIQ6gYQDAGR9KBEXiO1m8PeK9KmOo3SabdSksDKxwx6j6ZNV/Heopo/jePVLOW+bS4J/3+24JUn0A7cV0XxJtbOTw2z3atI1s2UkX+EZ61zdtpVrqfwru7q0M8zeYbonALTDbihSJaOlOmxat4qjWwu7oWFnGk8q+aSGZgGAB/nXOXZuPG2ua8SlzdfYxsgt0l2LGwbG4g8Hius+HmmvYeEoHbzY57l8usgxhQf8K5XV7ybwF43nvIreMwXig7GztlOScUXuCRu+FNC1eBrq0uEmhtrmMh5RJyj4wNuOlcNp/hKDVNc1DQtR1S/gaJtyyNOzCQEn0+ld/4Z8WarrEt3df2clvYWkLMcZ+duoC1zPhi4nfxTPLPpTk3xPzMv+rAyR/OgTRa1+2h8Of2Fo99He3WiwKu9o5CGY5PJP07Vr+ALSTTTf6hZ6t/aGjyuqwwy5Lwk5GDn39qp+O9XvtD1Gx86Ge60yNQDEgz8+T/AEqTw5YXUela1rMWmvYC4j8yGzIwpKqfmHv3q0Kx2USSgyvcRlkc4XngVBq4urzTZ7ayuYrW8cfLKy8IMV518MfG+qz6sdM1uSW4W7OIvM6Rv1IH4Cug+KNzeQeFp2s9xYHEp/urznFElqNMwNYtl8PTWF2viG4n1LzAsg85mjccA8Zx616cE3/vE3FHG4c4zXhd1LDe+BtNu7LSFhdJyDNg5mYEdefWvX/CV3rN9pcUmrxxwytgKkecBfxpWGZvi03aaRcywzyRSx8Lhjk596paH4XuZtGg1K51O9bVGhDqxnYxj2x+dbHitHXwzqm47iUPlgdQcGub8F+Lb2Twda6edE1BrkIIkmKfIxx3OaQjftL6/wBa8Bajc5H2gROjD8Dz+lM8DpJa+BLZLfCzmWTBPPznGTTNTvY/CHgwRSwMLi6Ux7VH8TZxmue8H317a/Dq/DSSi9hneRQeoUt2/CgVzZ8SyXOjaZpt1LqZa+WUJdqpOyTrkBe3ap/iV4mutA8NQ29panzr7y/LmBGUBxn371y2u69p1/4DiubO0uEuA257uZQA0mPUVpeJHuPFfgLTtYkjME9njcG6OARj+VVYESweA5ZdP065t9Rvk1Dy1mmlknZg2e2Kd4/8QTafd6ToFnNKJb0qZnVjuKg4IB7day9H+L7f6JZyWamR1WJSmak+LEF1aa7oOvQReUIWUvIvQfNnBpWGRzprln4gt7nRrLUIIUxHMtzP5okA4yB29a9NZN6FWbbkcn0ri5/i5bXdxb2OnWzz30zAFWHB9SMfjXaOyzZXkA/KPrSA88+LFzHaLY2DPKsdwcA5JIfIww+hOan1CO58KeC7Rp9Rn1DUExJbyZbAJwMEH2zWL8SPGFlqskdvaQbn02VWMzdTg5IH5Vf8fa62r/Dyz1HST8zjEpH8BxVIDY8S2epXempqNjdyrqUNuZGaKXER74IBxU13e6rqHhG1vbOf7PdeUVkDjIc7ef615xpPj2XS/h5d6ZcRzfaZWCxzJ1bIPWuo1zxQ2jfDvSbafdHcXIIy3Gzgcn602K5D8OfC2o3k9lrlxqkyJbMF8je2D355wa9QZpIBchX35K7SODzXD/DG+u7vRntpbR0Ns+VdB8kwx1zXayfu43U9xh89s1IJnLW99qGveKn09LmKKzt0xOY/vdx1H4Va8PWGoaLNqMV7dPd2xJaEOSSox6muP0bUoPhx4o1aS8s/Pa+yYyw+8CcjHvXZ+EfET+Jbe7D2sg8r5XbHC5GQKQzM0ia88UzXLXF3LbRWzlRHG5BIBwOlaGj6/Jca3e6FIkjPCpcF2zuHAxXm114m1b4feIbwLbtPbXT5xPwCMk9q7X4f79V1LUfEs0Sqk5KIPY4NFhCeEPEt3d6trem6lqCiFGUQ7UJ2dc8il8EXt1/wk+uwnUm1KCGL92rZIU7/AHrk7PU7Xwn4s1SOJHcXYYshHJODgD86t/D7W0tPGbafDZPCL9R5kZHzrznJ/KqsKx1P9oal/wAJg+lM8k1ncQuZTG20r06fnWZo1vfaV40m061vZrzTZVBCzuXaNuT1NUr/AFi5t/icBYq7WyAxSk9BnFQeIfFFppnjaOa2ukERUI6RHkNgjmiwy54nvNS074oaG07wX0cjDbGI8+Xya2fH3iS6tNW0/SILiSH7XlpRGCGKjHAx04NY174k0aw1zTtZMEs89ggSVsAsxzmtTxnq0FjrGleMvmFoyEDf95M4BpCW5Jpmo3Olaza2mk2+oT2cz7bgXUhcouOoJ98VV163mg+MWmXEcxVZrWQbTz8uVzWrp3xJj8VXCxaVDOxeUhmkAxj14rF8X3ky+P8ASp4IzIbaMxsE58wEgmhoo7y8jaKQkDC56g5qO7uIY0UEbyRtBHUfWue8TeINY026iNraJ9nIDSFs5APpWrb3MN7ZpexBdsy7tx7CpBGf4yk2+GrkbtoWSKQH02nOPxrq9Gmj1fSNMuCBEXtEbgda43xjM0vhq7ECDe21ED9yeMj6Vf8ACNpqWm+GtPjl1AzziFQzseFGPuigZtRQ/Mxc4UcEEdvWnRshmMauzAdiuBj61NujmZy4YnsoNRbs/ugMM3Q0ix8EjTgwIQrKSd7c8Ux9yR5Dg7TwPWkEqx5AAyeMj2qB1JUqv3jyKBWGQom98DqOeMZNPsUFruMjMSScd/wqTf5Txq8YGBkHHenFxIPu7WzkgVVxDlePIjjHHfK/1ps9vHJ+737AvJBXOaRBhxT51xJ5h5GOlTYCK2W3juAGX923AHTmnKJIyQDhc0vmRPJF5kYXHK8damkAAkB6cUxERRWuI55Fyycpjj8/WrFy8c43qxUZ5A9aqo8iuu1kkUdMDkU+RXRw2wKrHPFMYq7CNjOdpPcUSQxiRmUkqh28HoKrShmdzI4VBg5P8NSxTxSMrQTxSqeTs4B/Oi9gHNGGLRN90jK55pqoIFTAcEnB4zS3vmbMhBtyNrdx61Lb3MrgRsmVH8dK4FLWNLtdUsZbCZ5EikO0lcqR+NQWvg7T9K0n7Jp58sqdyuzZZj3ye9bMaCeNo25k759PWmxxLMBG3BTpQIggiYxRmUnzyu0t2+tWYoR5JJwjcggimvE8eFY5HahnL5DZJoAgkljELLKFfZ0wMbferXmENFhtwI9c1VaKIEnOCakjTagZCMr90etTcYlwoeXI/d806WMETAuCoGMDuahluRcnagDAdSexoiaTy2Zow59V7j1p3Cxal/eoit0xnjjpTIgh87eP4Rz3qvbXjSBQ8LjGeeKlwWcyhhtPAX0pc1yrEZtmlifa6iRRmMH+KmtbpJAlzHtEv3XOOQR1qWQEDdtHH8XcVBE0wRh5a4JOVA5NDYh00oVA0i+YDzuB5pFbCAgYi7EfezTfmXKqNoC8I3QVKxeFArRjnocVF2Mht2CtKeFXOSCOaS9tyZI5EzjNPVNz9BuPrTkv0VDHPCTg8MKTuNIrs4ScbW2EdSOtXGkMQYIYyrc42jJqBoYJW3oh3HnLUSeUy4aRYmkPynvQrgMVijFkyB3HrT/MbzduTt2ggelDrtcLuDYHUd6kEkcuFCAMBjNUgEiGQULqakWFX+QKOnp0qMRrD8pAJPQdxViKJ45ieSNo4FNsRmmzt5Zo3cv5kDZUgnB/D0qysSRB9kaLvOSQBmiRltpDvXYR6/xD0oLiX5wpA9B1qOZiGAKJhKADIBgEr/WleFJJRO4jEv8AewM/nSmJ39k9fSk+zR/7b/7p5p8w0Ey297E0M0amHuGGQxqK3sre2gW1giRIlH+rAwuP89qmMaxJtdcr1APaomRyNyElfSlzA0SqiHEYBwvO1eKff2lvfQCSWCGSNeArqCy+4J5qK2Yq/oatiASqwPcdT0q4sRHbWkIBtxGoiC7WUDb1/nUbwLB5axxRqUJ5AGcfWpPJbY5ZpGfcCCDwRUpkVgGaBhkbccdqsCJZLeUypJFG2xcgyKGH696bd2lxcWbpayLhomVVwMEkcU9olAKlPrmpEPkhccKvIFNOwrHmfgr4d65p3ij7brZjSOFzLCEIOWPHb2r0e+tIpiQ8auvdW6EVZa6NyA+ejYHsKjlBIweccGibvsKxQewg+zmOO1gEI5WMKMZ+lW4JFeGJgAGA5A7GoiXjljWFQYznLHtU8lrGbdn8wxzbvur0NSrjOQ+IF/qsNh9lsLIzwSA+cVGTisr4W6vqscx0m5sCLMoDbuwwUPvx6V36mVBtDHkc+9EUSG3HkoEdXPIqiWJeFbuJS0UbLF8wV1Bxj61XVLO+tivlIqt95VUCrDHywS4yOpB706CGOIFo0G9+fwNBNhsVpZPafYHgh+ynqhiAFQ6Vptvp+nzWccaSWjMSEds4596uFIWG2ZypXgj1NCxQGMjIAHQ9qWo0Ytv4V0eG4F7b2cYuN3BIyB9BWreadbXkbiZBNFxuiYdvUU62dEfy19cg1PKjJJGHGEIxu9qEMzdI8M6Lpwe5t7KONiTsckMy1fuY9tsuXXPYgVGkax7gg2jJxmnxxRyRlN+SOgp3AqppWn+S6vZQOD1/dgkk/hWFq/gnSrjT57NIZLcTkkqrkrk+g6CulgbbncxQD9abMXkUIR8rHcp9PalzAcr4W+HVt4YmlYtHfW8jhlR1DbDj3zXQX2lWmq28sN1bRMvRWKjC/QdqtWzMA3ljCNwcVIIY5B5aSlfXPeqYmivYaSmhwWlvaupgWPa645znrVqWKO7VzGWU98jrimwRmNpkZwdo43dalyVXr2pAjMvdNtdSh+y39nFMrLjjG/6g9abpOg2eiQizsWMcI+fBbJJ9z3qacssweMkMBwR1z6VJCqyQpNL8szfMF9QKBlXVdL0zVwg1DTxNg8Y4Ip0ohtLeK3tLfbFGOUQYwv8AWrxkMh3hWIPHFPjVRGzqhVjxk9SKAM77JbPcQ3psrd5jxuZBkCmnS9Og1v8AtAW6JdKMmRPT8KuKgYbAOc9aJYYUAWQ7HYY3DqRUu4BAlr5ryxRQCYsNzFASagvNG0m4JaXTYWfdu3hBnP5VbURxSYhWJi/B45oWWVQ8Trxnr+NK7CxTOnWkiSg2EPmSNu2sg5P5VHJZ22u6fNZXVuHhRlyjJtCkelaz/vJMlhlVyCafH88WMqfpVJg0Z1to9hpwt0tbSODZxlcc+9WIooZXeRoYhInSQqM05gykbRkjt6CluBiGMLyD1ptgjm/Fc2q3cS6JY2cTtdkeZcOwG1RzwTWtZaPaWdtbWagr5MWzluGOame2aTBLE46e1NkhuQN0q5QfOjf0pFMrnR7W+cCaMs0TZUbsCr91atOqKyBQgwAvA/SkhfeBKv0Iq+kpUbgEOf7wzQIowfeAPJPOadKuGoopFjYP4jjpULKJgS1FFAD42LbUPROBUrMVjcDjPGfaiimSxAxZFz/AOKSRdq7ycj0oooEPjw6KdoGRT3iOwneenTFFFAEEwxEmOKngUSQsD2XNFFIZFbqJzsbsahm0ixSczLAA6c5DHmiim9gEMCbTgEAEADNTRLIoIWUgJyBiiipArteyjPNTRyiQs2wBsDnNFFUIkjJM8QP96lThn+uKKKGMjmUBsY6VGf3n7s8Ac5ooqACP5w20bPXHfFS6c63KbWQAnjOelFFMaGLEI5cjsCKbJD9nn+Rj8yhjRRUosIz5m6eT5hHwE7GnQyCWJmCheegoooZJDNI8MzFT0O6rP+tjjJPMnzfTFFFJCEdcfvhw68g1PHaxXUMUm0ITwcd6KKTLRGriK6eFUGEGc+tVHCPchpED7jjB7UUU0DJIQv2nCrtXB4pxkUNjyx9aKKYgEaCZmxzircULGy83zD94/LiiihiIhGsjqzjdtORmo5ZCruQBz+lFFZgVFlZgVblZDtIrSit9hDK5B+lFFA0V5f32N3YtT4gFslYDnHWiigodHAhxIR81Ok4hbFFFaRIH2yK8SlhmpQFV1G0d6KK0QFVpirFABhqdOMBaKKBEFuP37jtVp+lFFAiBgpdEZQQanMQjiZc5HbPaiigGVm6K3904+tSKoWJ9vGTmiimSMCjem4bue9TIdpkI6iiigCvHJvnKyKHVuoNLFDHFJIEXAPbNFFADpIEYb8cinwkyYVuQO1FFICQ2/wAz/OcYHGKbBZJJcsu4gUUUMCK+RrVtquSM9CKkVFMAfHIoopICvsEXyr0p0f393cUUVTAtFzLw2KSY+ZGM8ZBzRRSQFeMB51QjhYxTCxLlOy8CiimA+Kcwt5YAIcHNSwwtcW6oJDHjuBmiigBCgR5B1wOtNuwEWBlHJUUUUMCJSfm/3hTpozImA5U+oooqUNE4jXyw4GGAxn1pskjRxkrxkGiihAyFLh8Qk81Kj+aPLYcGiimCI4/nLKPlCH86e84aIExjD8AZ+7RRQNjk4lYDpgU9MnKg4xRRQI//2Q==" alt="Cabinet, n. a set of drawers, a place for counsel,"><img class="strip" src="data:image/jpeg;base64,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" alt="the executive counsel of a state"><p class="fig-cap">Webster, 1806</p></figure>
       </div>
       <aside class="notes">
-        <p>[5:30–6:30]</p>
+        <p>[4:50–5:45]</p>
         <p>Both Webster editions are encoded in TEI-XML and linked to their page images, so every sense is a structured record you can cite back to the page. A vector database then scores how similar passages are, within and across dictionaries. That supports the project's questions: what changed between 1806 and 1828, how Webster's entries compare to Johnson's, his approach to etymology and definition, and his use of American vocabulary.</p>
         <p>Cabinet: five of Johnson's senses carry into 1828, mostly with the same authorities: Bacon, Dryden, Swift, Taylor, Spenser. Webster reorders them. Johnson's second sense, "a hut or small house," drops to last and is marked obsolete. The etymology grows from Johnson's "cabinet, French" to French, Italian and Spanish forms, with a cross-reference to cabin.</p>
         <p>I matched these senses by hand from the page images. Similarity scoring does the same matching across the whole dictionary.</p>
@@ -531,6 +537,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item active">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <h2>what Webster added</h2>
@@ -542,7 +549,7 @@
         </div>
       </div>
       <aside class="notes">
-        <p>[6:30–7:10]</p>
+        <p>[5:45–6:20]</p>
         <p>The one sense in 1828 with no match in Johnson is the political one. Johnson's nearest is "a private room in which consultations are held." Webster already has "the executive counsel of a state" in 1806. By 1828 it is a full sense, and he explains the name by the room where the council met.</p>
         <p>That is the kind of difference the similarity scores surface at scale: Webster bringing American political usage into the dictionary, one sense at a time.</p>
       </aside>
@@ -556,6 +563,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item active">webster's</span>
         <span class="seq-item">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <h2>Webster for K–12 readers</h2>
@@ -571,9 +579,10 @@
         </div>
       </div>
       <aside class="notes">
-        <p>[7:10–8:00]</p>
-        <p>Read both aloud. Students stumble on "select or secret council of a prince." The modern version makes it clear these are the President's top advisors.</p>
-        <p>Three design choices. The reader chooses whether to show the translation. It sits beside the original rather than replacing it. It is AI-drafted and reviewed by an editor before it goes live. The point is to get students into Webster's own words, not around them.</p>
+        <p>[6:20–7:05]</p>
+        <p>[Read both versions aloud.]</p>
+        <p>Students stumble on "select or secret council of a prince." The modern version makes it clear these are the President's top advisors.</p>
+        <p>We made three design choices. The reader chooses whether to show the translation. It sits beside the original rather than replacing it. It is AI-drafted and reviewed by an editor before it goes live. The point is to get students into Webster's own words, not around them.</p>
       </aside>
     </section>
 
@@ -585,6 +594,7 @@
         <span class="seq-item">transcription</span>
         <span class="seq-item">webster's</span>
         <span class="seq-item active">security</span>
+        <span class="seq-item">architecture</span>
       </nav>
       <div class="seq-main">
         <p class="question">long-lived projects, long-lived code</p>
@@ -605,7 +615,7 @@
         </ul>
       </div>
       <aside class="notes">
-        <p>[8:00–9:00]</p>
+        <p>[7:05–7:55]</p>
         <p>One more use of AI, and this one is behind the scenes. Digital history projects live a long time. Some of the active projects we maintain have codebases going back to 2011, when PHP was the dominant language for websites like ours. That code was written to the practices of its day, and the people who wrote it have often moved on.</p>
         <p>It turns out coding agents are very good at finding bugs. So we will use them in two ways. On older sites, an agent reads through the code and flags vulnerabilities and outdated practices so we can patch them. On new sites, it tests the code against current best practices before launch.</p>
         <p>The same rule applies here as everywhere else in this talk: the agent finds and proposes, and a developer reviews every fix before it goes live.</p>
@@ -613,7 +623,53 @@
       </aside>
     </section>
 
-    <!-- 11 — Takeaways -->
+    <!-- 11 — Architecture -->
+    <section class="content-slide sequence-slide" data-background-color="#F8F9FC">
+      <nav class="seq-nav">
+        <span class="seq-item">print</span>
+        <span class="seq-item">network</span>
+        <span class="seq-item">transcription</span>
+        <span class="seq-item">webster's</span>
+        <span class="seq-item">security</span>
+        <span class="seq-item active">architecture</span>
+      </nav>
+      <div class="seq-main">
+        <p class="question">from one server to many moving parts</p>
+        <svg class="arch" viewBox="0 0 800 150" role="img" aria-label="Handwriting transcription test system: researcher workspace sends pages to an AWS coordination layer, which uses models trained and hosted on Jetstream2 GPUs through NSF ACCESS">
+          <rect x="1" y="20" width="220" height="96" rx="6" fill="#FFFFFF" stroke="#D5DDE8"/>
+          <rect x="290" y="20" width="220" height="96" rx="6" fill="#E8EFF8" stroke="#D5DDE8"/>
+          <rect x="579" y="20" width="220" height="96" rx="6" fill="#1C2E4A"/>
+          <line x1="221" y1="68" x2="282" y2="68" stroke="#7E99B0" stroke-width="2"/>
+          <path d="M282 62 L290 68 L282 74 Z" fill="#7E99B0"/>
+          <line x1="510" y1="68" x2="571" y2="68" stroke="#7E99B0" stroke-width="2"/>
+          <path d="M571 62 L579 68 L571 74 Z" fill="#7E99B0"/>
+          <text x="111" y="58" fill="#1C2E4A" font-size="17" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-weight="700">researchers</text>
+          <text x="111" y="84" fill="#2D3E50" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">page images, prompts,</text>
+          <text x="111" y="102" fill="#2D3E50" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">corrections</text>
+          <text x="400" y="58" fill="#1C2E4A" font-size="17" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-weight="700">AWS</text>
+          <text x="400" y="84" fill="#2D3E50" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">batch jobs, model routing,</text>
+          <text x="400" y="102" fill="#2D3E50" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">frontier models, scoring</text>
+          <text x="689" y="58" fill="#FFFFFF" font-size="17" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-weight="700">Jetstream2 GPUs</text>
+          <text x="689" y="84" fill="#C9D4E3" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">fine-tuning open models</text>
+          <text x="689" y="102" fill="#C9D4E3" font-size="13" text-anchor="middle" font-family="Inter,sans-serif">through NSF ACCESS</text>
+          <text x="400" y="142" fill="#7E99B0" font-size="12" text-anchor="middle" font-family="Inter,sans-serif">handwriting transcription test system · planning stage</text>
+        </svg>
+        <ul>
+          <li>then: a PHP site on one server</li>
+          <li>now: cloud orchestration, GPU time, several models, versioned training data</li>
+          <li>new skills for a humanities center: architecture, cost control, data governance</li>
+        </ul>
+      </div>
+      <aside class="notes">
+        <p>[7:55–8:55]</p>
+        <p>Working with AI has also changed what we have to build. For most of our history, a digital project meant a website on one server. The handwriting transcription system is a different kind of thing: several services that have to work together.</p>
+        <p>Here's the design. Researchers upload page images and correct transcriptions. Amazon Web Services coordinates the work: it splits a collection into batch jobs, routes each one to the right model, calls frontier models when they're needed, and scores the results against pages we've already verified. For fine-tuning open models, which takes serious GPU time, we use Jetstream2, an NSF-funded research cloud we can apply to through the ACCESS program. A trained model can then be brought back into AWS and used as one more option.</p>
+        <p>That means a humanities center now needs skills we didn't need before: designing systems like this, keeping cloud costs under control, and governing the training data, including where each verified transcription came from and whether we have permission to reuse it.</p>
+        <p>This is still in planning, and it's the first project where we're designing for this kind of architecture from the start.</p>
+      </aside>
+    </section>
+
+    <!-- 12 — Takeaways -->
     <section class="title-slide takeaways" data-background-color="#1C2E4A">
       <p>ai proposes; scholars decide.</p>
       <p>structure comes first.</p>
@@ -621,7 +677,7 @@
       <p>use computation to find the "hmm" moments.</p>
       <div class="footer-label">Center for Humanities and Digital Research, University of Central Florida · printmigrationnetwork.org</div>
       <aside class="notes">
-        <p>[9:00–10:00]</p>
+        <p>[8:55–10:00]</p>
         <p>AI proposes; scholars decide: entity matches, model routing, translations and code fixes are all labeled and reviewed.</p>
         <p>Structure comes first: TEI, PRINT's layered data model and gold-standard transcriptions are what make AI output checkable.</p>
         <p>Keep the original in view: translations sit beside Webster, and transcription keeps period spelling.</p>
